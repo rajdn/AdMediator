@@ -1,31 +1,27 @@
-Implementation notes for configuring AdMediator
-==============================================
+<h1>Implementation notes for configuring AdMediator</h1>
 
-1. Include the source files into your xcode project, the following files are required.
-	- AdMediator.h
-	- AdMediator.m
-	- AdMediatorConfig.h
-	- AdMediatorConfig.m
+<ol>
+<li><p>Include the source files into your xcode project, the following files are required.</p>
 
-2. Include the AdMob SDK source files from the AdMob website
+<ul><li>AdMediator.h</li>
+<li>AdMediator.m</li>
+<li>AdMediatorConfig.h</li>
+<li>AdMediatorConfig.m</li></ul></li>
+<li><p>Include the AdMob SDK source files from the AdMob website</p></li>
+<li><p>Include following Frameworks required for AdMob</p>
 
-3. Include following Frameworks required for AdMob
-	- SystemConfiguration
-	- MessageUI
-	- AudiToolbox
-	
-4. Include following Frameworks required for iAds
-	- iAd (Set as weak reference (optional))
-	
-5. Create a GCC_PREPROCESSOR_DEFINITIONS called FREE_VERSION in your xcode target, this will indicate that your app is a free version and ads will be enabled.
+<ul><li>SystemConfiguration</li>
+<li>MessageUI</li>
+<li>AudiToolbox</li></ul></li>
+<li><p>Include following Frameworks required for iAds</p>
 
-6. Configure constant values in AdMediatorConfig.m to configure the AdMediator behavior specific to your needs
+<ul><li>iAd (Set as weak reference (optional))</li></ul></li>
+<li><p>Create a GCC<em>PREPROCESSOR</em>DEFINITIONS called FREE_VERSION in your xcode target, this will indicate that your app is a free version and ads will be enabled.</p></li>
+<li><p>Configure constant values in AdMediatorConfig.m to configure the AdMediator behavior specific to your needs</p></li>
+<li><p>Logging can be turned on or off in AdMediatorConfig.h to enable debug logging</p></li>
+<li><p>Modify your UIViewController class to extend AdMediator</p></li>
+<li><p>Create a new view in your ViewController's XIB file (or programatically) where the rest of your user interface objects would be placed in, link this view to "contentView" that is defined in AdMediator class.  The contentView size will be adjusted when the Ad Banners need to be displayed.</p></li>
+<li><p>That should be it, run the app.</p></li>
+</ol>
 
-7. Logging can be turned on or off in AdMediatorConfig.h to enable debug logging
-
-7. Modify your UIViewController class to extend AdMediator
-
-8. Create a new view in your ViewController's XIB file (or programatically) where the rest of your user interface objects would be placed in, link this view to "contentView" that is defined in AdMediator class.  The contentView size will be adjusted when the Ad Banners need to be displayed.
-
-9. That should be it, run the app.
 
