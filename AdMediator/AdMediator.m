@@ -1,5 +1,5 @@
 //
-//  SimplyAdMediator.m
+//  AdMediator.m
 //
 //  Created by iKim Beveridge on 29/04/11.
 //  Copyright 2011 Simply iApps. All rights reserved.
